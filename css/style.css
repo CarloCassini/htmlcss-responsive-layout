@@ -5,9 +5,9 @@
   --db-color-red: rgba(250, 0, 0, 0.3);
   --db-color-blue: rgba(0, 0, 250, 0.3);
   --db-color-green: rgba(0, 250, 0, 0.3);
-  --space-s: 1rem;
-  --space-m: 2rem;
-  --space-l: 3rem;
+  --space-s: 5px;
+  --space-m: 20px;
+  --space-l: 50px;
 }
 
 * {
@@ -112,20 +112,85 @@ main {
   text-align: center;
   border-radius: 20px;
 }
-#feature h2,
-h1 {
+#feature h2 {
   color: #0084fd;
   margin: var(--space-s) 0;
+}
+#feature h1 {
+  color: #0084fd;
+  margin: var(--space-s) 0;
+  font-size: 50px;
 }
 #feature p {
   margin: var(--space-s) 0;
   font-weight: bolder;
 }
 
+/* +++++todo */
+#img-col {
+  align-items: center;
+}
+
 #feature .button {
   background-color: #0084fd;
   color: white;
   margin: var(--space-s) 0;
+}
+
+#feature img {
+  display: block;
+}
+/* planning */
+
+#planning {
+  background-color: #9792e4;
+  color: white;
+
+  text-align: center;
+}
+#planning .container {
+  width: 70%;
+}
+#planning .row {
+  flex-wrap: wrap;
+}
+#planning .col {
+  width: 100%;
+  padding: var(--space-l);
+}
+
+#planning h1 {
+  color: #0084fd;
+  margin: var(--space-s) 0;
+  font-size: 50px;
+}
+#planning p {
+  margin: var(--space-m) 0;
+  font-weight: bolder;
+  text-align: left;
+}
+
+#planning .card {
+  background-color: white;
+  color: black;
+  text-align: center;
+  border-radius: 20px;
+}
+#planning .card p {
+  text-align: center;
+  font-style: italic;
+  font-weight: 100;
+}
+
+#planning .circle {
+  margin: 0 auto;
+  width: var(--space-l);
+  aspect-ratio: 1/1;
+  background-color: #9792e4;
+  border-radius: 50%;
+  font-size: var(--space-m);
+  text-align: center;
+  line-height: var(--space-l);
 }
 
 /* +++++++++++
@@ -171,5 +236,12 @@ h1 {
     background-color: white;
     color: #0084fd;
     border-radius: 10px;
+  }
+
+  #planning .col {
+    width: 50%;
+  }
+  #planning .card {
+    margin-top: calc(var(--space-l) * 2);
   }
 }
