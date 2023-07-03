@@ -1,6 +1,14 @@
 /* +++++++++++
 ++ Reset    ++
 ++++++++++++*/
+:root {
+  --db-color-red: rgba(250, 0, 0, 0.3);
+  --db-color-blue: rgba(0, 0, 250, 0.3);
+  --db-color-green: rgba(0, 250, 0, 0.3);
+  --space-s: 1rem;
+  --space-m: 2rem;
+  --space-l: 3rem;
+}
 
 * {
   box-sizing: border-box;
@@ -14,17 +22,74 @@
 
 .debug {
   border: 1px dashed red;
-  background-color: rgba(0, 250, 0, 0.3);
+  background-color: var(--db-color-green);
+  min-height: 20px;
 }
 
 /* +++++++++++
 ++ layout   ++
 ++++++++++++*/
 
+.row {
+  display: flex;
+}
+
+.col {
+}
+
+/* header */
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  line-height: var(--space-l);
+  padding: 0 var(--space-m);
+}
+main {
+  margin-top: var(--space-l);
+}
+
+#header .row {
+  justify-content: space-between;
+}
+#header ul {
+  display: none;
+  list-style: none;
+}
+#header li {
+  display: inline-block;
+  list-style: none;
+}
+
 /* +++++++++++
-++ Sectio   ++
+++ Section  ++
 ++++++++++++*/
 
 /* +++++++++++
 ++ Responsive ++
 ++++++++++++*/
+
+/* tablet */
+@media screen and (min-width: 480px) {
+  .debug {
+    background-color: var(--db-color-blue);
+  }
+}
+
+/* screen */
+
+@media screen and (min-width: 790px) {
+  .debug {
+    background-color: var(--db-color-red);
+  }
+
+  #header #hamburger {
+    display: none;
+  }
+  #header ul {
+    display: block;
+    list-style: none;
+  }
+}
