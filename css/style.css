@@ -16,6 +16,10 @@
   padding: 0;
 }
 
+img {
+  width: 100%;
+}
+
 /* +++++++++++
 ++ Debug    ++
 ++++++++++++*/
@@ -30,12 +34,22 @@
 ++ layout   ++
 ++++++++++++*/
 
+.container {
+  margin: 0px auto;
+  /* padding: var(--space-s); */
+  width: 90%;
+}
+
 .row {
   display: flex;
 }
 
 .col {
 }
+
+/* +++++++++++
+++ Section  ++
+++++++++++++*/
 
 /* header */
 
@@ -44,43 +58,67 @@
   top: 0;
   left: 0;
   width: 100%;
+
+  background-color: #0084fd;
+  height: var(--space-l);
   line-height: var(--space-l);
+  text-align: center;
+  color: white;
+
   padding: 0 var(--space-m);
-}
-main {
-  margin-top: var(--space-l);
 }
 
 #header .row {
   justify-content: space-between;
+  align-items: center;
 }
+
 #header ul {
   display: none;
   list-style: none;
 }
-#header li {
-  display: inline-block;
-  list-style: none;
+
+#header img {
+  height: calc(var(--space-l) - 1rem);
 }
 
-/* +++++++++++
-++ Section  ++
-++++++++++++*/
+/* main */
+main {
+  margin-top: var(--space-l);
+}
+
+/* advantages */
+
+#advantages .row {
+  flex-wrap: wrap;
+}
+#advantages .col {
+  width: 100%;
+}
 
 /* +++++++++++
 ++ Responsive ++
 ++++++++++++*/
 
+/* il sito è MOBILE FIRST, quindi gestisco le trasformaioni all'aumentare dello schermo */
+
 /* tablet */
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 576px) {
   .debug {
     background-color: var(--db-color-blue);
+  }
+
+  #advantages .col {
+    width: calc(100% / 3);
+  }
+
+  #advantages .col:nth-child(1) {
+    width: calc(2 * (100% / 3));
   }
 }
 
 /* screen */
-
-@media screen and (min-width: 790px) {
+@media screen and (min-width: 992px) {
   .debug {
     background-color: var(--db-color-red);
   }
@@ -90,6 +128,16 @@ main {
   }
   #header ul {
     display: block;
+  }
+
+  #header li {
+    display: inline-block;
     list-style: none;
+    padding: 0 var(--space-s);
+  }
+  #header li:hover {
+    background-color: white;
+    color: #0084fd;
+    border-radius: 10px;
   }
 }
