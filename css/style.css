@@ -81,6 +81,7 @@ main .row {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 10;
 
   background-color: #0084fd;
   height: var(--space-l);
@@ -213,6 +214,7 @@ section {
 #testimonials .row {
   flex-wrap: wrap;
   justify-content: space-around;
+  margin: 20px;
 }
 #testimonials .col {
   width: 100%;
@@ -220,11 +222,19 @@ section {
   margin: 0 var(--space-m);
 }
 
+#testimonials .card {
+  margin: var(--space-m) 0;
+}
+
 #testimonials .testimonial-photo {
   margin: 0 var(--space-m);
   border-radius: 50%;
   overflow: hidden;
+  width: 50%;
   aspect-ratio: 1/1;
+  position: relative;
+}
+.testim-text {
   position: relative;
 }
 .testim-media {
@@ -237,19 +247,21 @@ section {
 }
 
 #testimonials .up-comma {
-  font-size: var(--space-l);
+  font-size: var(--space-m);
   position: relative;
-  bottom: 5px;
 }
 
-.down-comma {
-  font-size: var(--space-l);
+#testimonials .down-comma {
+  font-size: var(--space-m);
   position: relative;
-  top: 5px;
 }
 
 #testimonials h2 {
   color: #9792e4;
+}
+
+#testimonials h3 {
+  margin: var(--space-m) 0;
 }
 
 #testimonials .card {
