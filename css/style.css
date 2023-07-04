@@ -48,8 +48,12 @@ img {
 .row {
   display: flex;
 }
+main .row {
+  margin: 0 calc(var(--space-m) * -1);
+}
 
 .col {
+  padding: var(--space-m);
 }
 
 .button {
@@ -63,6 +67,7 @@ img {
   width: 100%;
   aspect-ratio: 1/1;
   border-radius: 50%;
+  overflow: hidden;
 }
 
 /* +++++++++++
@@ -103,6 +108,9 @@ img {
 /* main */
 main {
   margin-top: var(--space-l);
+}
+section {
+  padding: var(--space-m) 0;
 }
 
 /* advantages */
@@ -213,7 +221,7 @@ main {
 }
 
 .testimonials .col.testimonial-photo {
-  width: 60%;
+  width: 100%;
 }
 
 .testimonials h2 {
