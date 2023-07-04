@@ -272,6 +272,13 @@ section {
   border-radius: 20px;
 }
 
+/* benefits */
+#benefits {
+  background-color: #9792e4;
+  color: white;
+  text-align: center;
+}
+
 /* +++++++++++
 ++ Responsive ++
 ++++++++++++*/
