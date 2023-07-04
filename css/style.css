@@ -122,6 +122,7 @@ section {
 #feature .col {
   width: 100%;
 }
+
 #feature .card {
   background-color: #b5ddff;
   color: #5a6e7f;
@@ -246,12 +247,7 @@ section {
   width: initial;
 }
 
-#testimonials .up-comma {
-  font-size: var(--space-m);
-  position: relative;
-}
-
-#testimonials .down-comma {
+#testimonials .comma {
   font-size: var(--space-m);
   position: relative;
 }
@@ -277,6 +273,19 @@ section {
   background-color: #9792e4;
   color: white;
   text-align: center;
+}
+
+#benefits .col {
+  width: 100%;
+  padding: var(--space-l);
+}
+
+#benefits .card {
+  background-color: white;
+  color: #9792e4;
+  border-radius: 10px;
+  padding: var(--space-m);
+  text-align: left;
 }
 
 /* +++++++++++
