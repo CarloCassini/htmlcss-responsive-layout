@@ -207,33 +207,52 @@ section {
 }
 
 /* testimonials */
-
-.testimonials {
+#testimonials {
   text-align: center;
 }
-.testimonials .row {
+#testimonials .row {
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.testimonials .col {
+#testimonials .col {
   width: 100%;
   padding: var(--space-s) 0;
+  margin: 0 var(--space-m);
 }
 
-.testimonials .col.testimonial-photo {
-  width: 100%;
+#testimonials .testimonial-photo {
+  margin: 0 var(--space-m);
+  border-radius: 50%;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  position: relative;
+}
+.testim-media {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: initial;
 }
 
-.testimonials h2 {
+#testimonials .up-comma {
+  font-size: var(--space-l);
+  position: relative;
+  bottom: 5px;
+}
+
+.down-comma {
+  font-size: var(--space-l);
+  position: relative;
+  top: 5px;
+}
+
+#testimonials h2 {
   color: #9792e4;
-  /* text-align: center; */
 }
 
-.testimonials h3 {
-  /* text-align: center; */
-}
-
-.testimonials .card {
+#testimonials .card {
   padding: var(--space-s);
   background-color: #9792e4;
   color: white;
@@ -260,14 +279,16 @@ section {
   #feature .col:nth-child(1) {
     width: calc(2 * (100% / 3));
   }
-  .testimonials .card {
+  #testimonials .card {
     text-align: left;
   }
-  .testimonials .card.row {
-    flex-wrap: nowrap;
+  #testimonials .card .col:first-child {
+    text-align: center;
+    max-width: 30%;
   }
-  .testimonials .col.testimonial-photo {
-    width: 30%;
+  #testimonials .card .col:last-child {
+    flex-grow: 1;
+    flex-basis: 0;
   }
 }
 
