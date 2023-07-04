@@ -362,10 +362,50 @@ section {
 
 #start {
   background-color: #9792e4;
-  color: #b2afeb;
+  color: #e9e7fa;
   text-align: center;
 }
+.fa-circle {
+  font-size: x-small;
+}
+#start h4,
+#start h2,
+#start h1,
+#start p,
+#start .button {
+  margin: var(--space-m) 0;
+}
 
+#start h2 {
+  color: white;
+}
+#start h1 {
+  color: #fdc15f;
+  font-size: var(--space-l);
+}
+
+#start .button {
+  background-color: white;
+  color: #9792e4;
+  font-size: var(--space-m);
+  padding: var(--space-m) var(--space-l);
+}
+#start a {
+  color: currentColor;
+}
+/* footer */
+
+#footer {
+  background-color: #333333;
+  color: white;
+  text-align: center;
+}
+#footer p {
+  margin-bottom: calc(2 * var(--space-l));
+}
+#footer a {
+  color: #9792e4;
+}
 /* +++++++++++
 ++ Responsive ++
 ++++++++++++*/
