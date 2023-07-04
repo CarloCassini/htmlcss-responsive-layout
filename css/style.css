@@ -130,6 +130,7 @@ section {
   color: #5a6e7f;
   text-align: center;
   border-radius: 20px;
+  padding: var(--space-m);
 }
 #feature h2 {
   color: #0084fd;
