@@ -309,6 +309,26 @@ section {
   color: white;
 }
 
+/* <!-- about --> */
+
+#about .row {
+  flex-wrap: wrap;
+}
+#about .col {
+  width: 100%;
+}
+
+#about p {
+  margin: var(--space-m) 0;
+}
+
+#about h1,
+#about h2 {
+  font-size: var(--space-l);
+  color: #9792e4;
+  margin-bottom: var(--space-l);
+}
+
 /* +++++++++++
 ++ Responsive ++
 ++++++++++++*/
@@ -345,6 +365,13 @@ section {
   #benefits .col {
     width: calc(100% / 2);
     padding: var(--space-l);
+  }
+
+  #about .row {
+    flex-wrap: nowrap;
+  }
+  #about .col:last-child {
+    width: calc(100% / 3);
   }
 }
 
